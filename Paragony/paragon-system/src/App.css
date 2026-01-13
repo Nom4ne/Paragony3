@@ -1,0 +1,104 @@
+﻿/* --- GLOBAL LIGHT / DARK (PLAIN CSS, works without Tailwind @apply) --- */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* zmienne kolorów dla obu motywów */
+:root {
+    --bg: #f3f4f6; /* light: gray-100 */
+    --card: #ffffff;
+    --text: #111827; /* gray-900 */
+    --muted: #6b7280; /* gray-500 */
+    --border: #e5e7eb; /* gray-200 */
+}
+
+html.dark {
+    --bg: #0b1220; /* very dark base (closer to gray-900) */
+    --card: #0f1724; /* dark card */
+    --text: #e5e7eb; /* gray-200 */
+    --muted: #9ca3af; /* gray-400 */
+    --border: #374151; /* gray-700 */
+}
+
+/* ensure browser knows both schemes are supported */
+html {
+    color-scheme: light dark;
+}
+
+/* Body uses variables so toggling html.dark instantly updates everything */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 180ms ease, color 180ms ease;
+}
+
+/* przykładowe elementy — użyj tych klas w komponentach jeśli chcesz pewności */
+.app-card {
+    background-color: var(--card);
+    color: var(--text);
+    border: 1px solid var(--border);
+    transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;
+}
+
+/* drobne elementy tekstowe */
+.muted {
+    color: var(--muted);
+}
+
+/* zachowaj twój istniejący kod dalej w pliku */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* To zapewnia, że tło zmienia się globalnie */
+body {
+    @apply bg-gray-100 text-gray-900 transition-colors duration-300;
+}
+
+.dark body {
+    @apply bg-gray-900 text-gray-100;
+}
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

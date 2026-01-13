@@ -1,0 +1,32 @@
+{
+  "email": "biuro@techprint.pl",
+  "password": "hash123"
+}
+
+{
+"email": "kontakt@market24.pl",
+"password": "hash456"
+{
+
+{
+"email": "info@autoparts.pl",
+"password": "hash789"
+{
+
+{
+"email": "kontakt@gastroking.pl",
+"password": "hashabc"
+{
+
+{
+"email": "kontakt@beautyline.pl",
+"password": "hashdef"
+{
+
+{
+"email": "eko@greenmarket.pl",
+"password": "hashghi"
+}
+
+
+

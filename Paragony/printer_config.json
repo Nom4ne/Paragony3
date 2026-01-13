@@ -1,0 +1,13 @@
+﻿{
+    "Vid": 10473,
+    "Pid": 649,
+    "PaperWidthPx": 384,
+    "FontSizeNormal": 24,
+    "FontSizeHeader": 24,
+    "FontSizeSmall": 17,
+    "MarginLeft": 5,
+    "MarginRight": 5,
+    "ChunkSize": 512,
+    "PrinterName": "MTP-II_A337"
+
+}

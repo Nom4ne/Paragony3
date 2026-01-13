@@ -46,7 +46,8 @@ Key characteristics of the application include a modern user interface with Dark
    Open your terminal, navigate to the frontend directory, and start the React application:
    ```bash
    cd .\Paragony\paragon-system\
-   npm start
+   npm install
+   npm start   
 ##  Printer Setup and Connection
 
 To ensure proper communication with the thermal printers, follow the steps below depending on your connection method.

@@ -36,8 +36,40 @@ Key characteristics of the application include a modern user interface with Dark
 
 **Note:** The whole frontend code is located in the `paragon-system` folder.
 
-1. **Frontend Setup:**
+**Method 1: General Setup**
+1. Create a user (e.g., `system_paragonow`) with the `CREATEDB` privilege.
+2. Log in as this user and create a database (e.g., named `Paragony`).
+3. Import the database dump file.
+4. **Important:** Update the `appsettings.json` file in the backend project with the correct database connection string and credentials.
+   
+2. **Frontend Setup:**
    Open your terminal, navigate to the frontend directory, and start the React application:
    ```bash
    cd .\Paragony\paragon-system\
    npm start
+##  Printer Setup and Connection
+
+To ensure proper communication with the thermal printers, follow the steps below depending on your connection method.
+
+### 1. USB-C Connection (Driver Configuration)
+For USB communication, the system requires the **WinUSB** driver to be assigned to the device using the **Zadig** tool.
+
+1. **Download Zadig:** Visit [zadig.akeo.ie](https://zadig.akeo.ie/) and download the application.
+2. **Enable Device Discovery:**
+   * Open Zadig.
+   * Go to the `Options` menu and select **List All Devices**.
+3. **Select Device:**
+   * From the dropdown list, find and select **Microprinter**.
+4. **Install Driver:**
+   * Ensure **WinUSB** is selected in the target driver box.
+   * Click **Replace Driver** (or **Install Driver**).
+5. **Configuration:**
+   * Note the **Vendor ID** and **Product ID** displayed in Zadig.
+   * Update these values in your configuration file to match your specific device.
+
+### 2. Bluetooth Connection
+1. **Pairing:** Pair the thermal printer with your operating system's Bluetooth settings.
+2. **COM Port Mapping:**
+   * Identify the assigned COM port in the System Device Manager.
+   * Update the COM port in the printer class constructor.
+   * *Note: If printing fails, try alternative COM ports assigned to the device, as some printers create multiple interfaces.*

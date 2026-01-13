@@ -69,8 +69,9 @@ For USB communication, the system requires the **WinUSB** driver to be assigned 
    * Update these values in your configuration file to match your specific device.
 
 ### 2. Bluetooth Connection
-1. **Pairing:** Pair the thermal printer with your operating system's Bluetooth settings.
-2. **COM Port Mapping:**
+1. **Pairing:** Pair the thermal printer with your operating system's Bluetooth settings and paste printer name(from BT pairing) to `printer_config.json`.
+   * *Note: In the latest version backend should automatically find proper COM port *
+3. **COM Port Mapping:**
    * Identify the assigned COM port in the System Device Manager.
    * Update the COM port in the printer class constructor.
    * *Note: If printing fails, try alternative COM ports assigned to the device, as some printers create multiple interfaces.*

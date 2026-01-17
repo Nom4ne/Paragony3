@@ -128,7 +128,7 @@ namespace ThermalPrinterMTP2P
             try
             {
                 
-                string PrinterComPort = PrinterFinder.FindComPort(_settings.PrinterName);
+                string PrinterComPort = PrinterFinder.FindComPortByNameAndMac(_settings.PrinterName);
 
                 Console.WriteLine($"    Próba połączenia Bluetooth ({PrinterComPort})...");
                 InitializePrinterBluetooth(PrinterComPort, baudRate);
@@ -485,7 +485,7 @@ namespace ThermalPrinterMTP2P
                 string standardPath = Path.Combine(baseDirectory, "Images", logoFileName);
 
                 // Path B: Your specific source path (for development on your PC)
-                string devPath = Path.Combine(@"C:\Users\Pc\source\repos\Paragony\Paragony\Images", logoFileName);
+                string devPath = Path.Combine(@"\Paragony\Paragony\Images", logoFileName);
 
                 string logoPath = string.Empty;
 
